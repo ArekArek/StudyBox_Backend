@@ -41,7 +41,7 @@ public class TipResource {
 
     @GET
     public TipRepresentation getTip(@Valid @PathParam("tipId") UUIDParam tipId) {
-        return new TipRepresentation(tipDAO.getTipById(tipId.get())).setAuditFields(tipDAO.getTipAuditFields(tipId.get()));
+        return new TipRepresentation(tipDAO.getTipById(tipId.get()));
     }
 
     @DELETE
